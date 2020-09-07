@@ -7,3 +7,5 @@
   <li>Phone: {{ $consumer->phone }}</li>
   <li>Email: {{ $consumer->email }}</li>
 </ul>
+
+<a href="{{ route('consumers.index') }}">Return to consumer list</a>
