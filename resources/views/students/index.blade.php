@@ -15,4 +15,5 @@
       <td>{{ $student->note}}</td>
     </tr>
   @endforeach
+  <a href="{{ route('consumers.index') }}">Go to the consumers list</a>
 </table>
