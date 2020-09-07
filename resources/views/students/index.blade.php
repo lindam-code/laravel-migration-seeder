@@ -6,6 +6,7 @@
     <th>Name</th>
     <th>Vote</th>
     <th>Note</th>
+    <th>Delete</th>
   </tr>
   @foreach ($students as $student)
     <tr>
@@ -13,7 +14,15 @@
       <td>{{ $student->name}}</td>
       <td>{{ $student->vote}}</td>
       <td>{{ $student->note}}</td>
+      <td>
+        <form action="{{ route('students.destroy', $student) }}" method="post">
+          @csrf
+          @method('DELETE')
+          <input type="submit" name="" value="Delete">
+        </form>
+      </td>
     </tr>
   @endforeach
   <a href="{{ route('consumers.index') }}">Go to the consumers list</a>
+
 </table>
