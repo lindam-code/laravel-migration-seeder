@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::resource('consumers','ConsumerController');
+Route::resource('students','StudentController');
