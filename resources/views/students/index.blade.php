@@ -18,7 +18,7 @@
         <form action="{{ route('students.destroy', $student) }}" method="post">
           @csrf
           @method('DELETE')
-          <input type="submit" name="" value="Delete">
+          <input type="submit" onclick="return confirm('Are you sure?')" name="" value="Delete">
         </form>
       </td>
     </tr>
